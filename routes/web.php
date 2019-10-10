@@ -16,4 +16,6 @@
 }); */
 
 Route::get('/', 'BooksController@index'); 
-   
+Route::get('/authors', 'AuthorsController@index'); 
+Route::post('/authors', 'AuthorsController@store');
+Route::get('/authors/create', 'AuthorsController@create'); 
