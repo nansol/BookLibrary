@@ -1,10 +1,9 @@
 <?php
-
 namespace App\Http\Controllers;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Validator;
 use App\Author;
-
 
 class AuthorsController extends Controller
 {
@@ -16,15 +15,8 @@ class AuthorsController extends Controller
     public function index()
     {
         //
-   /*      $authors = Authors::all();
-        return view('authors.authors', compact('authors')); */
-
-        $authors = array(
-            array('id' => '1','name' => 'Vincent Šikula','dob' => '1936','created_at' => NULL,'updated_at' => NULL),
-            array('id' => '2','name' => 'Ľudmila Podjavorinská','dob' => '1872','created_at' => NULL,'updated_at' => NULL)
-          );
-        return view ('authors.index', compact('authors'));
-
+     $authors = Author::all();
+     return view('authors.index', compact('authors')); 
     }
 
     /**
