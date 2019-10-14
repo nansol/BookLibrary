@@ -32,9 +32,9 @@ class BooksController extends Controller
         //
         $this->validate($request, [
             'author'=> 'required',
-            'name'=> 'required',
-            'edition'=> 'required',
-            'cover'=> 'required',
+            'name'=> 'required|unique:books',
+            'edition'=> 'required|unique:books',
+            'cover'=> 'required|unique:books',
             'isnb'=> 'required'
         ]);
 
