@@ -11,7 +11,7 @@
             <input type="text" name="name">
             <br>
             <label for="dob">Year of Birth</label>
-            <input type="string" name="dob">
+            <input type="number" name="dob">
             <br>
             <input type="submit" name=submit>
         </form>
