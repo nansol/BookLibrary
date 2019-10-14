@@ -46,7 +46,13 @@ class BooksController extends Controller
         $book->isbn = $request->input('isbn');
         $book->save();
         return redirect('/books');
-
     }
+
+        public function show($id)
+        {
+            //
+            $book = Book::find($id);
+            return view('books.show', compact('book'));
+        }
 }
 
