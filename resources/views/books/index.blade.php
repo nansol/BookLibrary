@@ -6,13 +6,16 @@
     </div>
     <table>
         <tr><th>Author</th><th>Name</th><th>Cover</th><th>ISBN</th></tr>
-        @foreach ($books as $book)
-        <tr>
+        @foreach ($books as $book)    
+
+
+      <tr>
             <td>{{$book->author}}</td>
-            <td>{{ $book->name }}</td>
+            <td><a href="/book/{{$book->id}}"> {{ $book->name }}</a>
+               </td>
             <td><img src="{{ $book->cover}}" height="42" width="42"></td>
             <td>{{ $book->isbn}}</td>
         </tr>
-        @endforeach
+        @endforeach        
     </table>
-@endsection  
+@endsection 

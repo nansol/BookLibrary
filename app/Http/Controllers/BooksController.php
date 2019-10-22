@@ -10,7 +10,7 @@ class BooksController extends Controller
 {
     //
     public function index(){
-        $books = Book::all();
+        $books = \App\Book::all();
         return view('books.index', compact('books'));
     }
 
